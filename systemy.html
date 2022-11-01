@@ -1,0 +1,266 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+	    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <script src="scripts/script_base.js"></script>
+	    <script src="scripts/script_systemy.js"></script>
+    </head>
+
+    <body style="font-family: 'Lato', sans-serif;">
+        <div id="myNav" class="overlay style="margin-top: 10%">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html"> <img src="images/green/home_white.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="3px" height="1px">  <strong style="margin-left: 10%"> Home </strong> </a>
+				<a href="kalkulator.html"> <img src="images/green/calculator_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"> <strong> Calculator </strong> </a>
+				<a href="systemy.html" style="color: #4CAF50"> <img src="images/green/hash_green.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"> <strong>Numeral systems</strong></a>
+				<a href="waluty_lista.html"> <img src="images/green/money_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Currencies </strong></a>
+				<a href="przeliczanie_dlugosci.html"> <img src="images/green/ruler_white.png" width="19px" style="margin-left: 5%"> <img src="images/odstep.png" width="22px" height="1px"><strong>Length </strong></a>
+				<a href="powierzchnia.html"> <img src="images/green/area_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Area</strong></a>
+				<a href="objetosc.html"> <img src="images/green/volume_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Volume</strong></a>
+				<a href="przeliczanie_wagii.html"> <img src="images/green/weight_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Weight</strong></a>
+				<a href="temperatura.html"> <img src="images/green/thermometer_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="20px" height="1px"> <strong>Temperature</strong></a>
+				<hr> </hr>
+				<a href="info.html"> <img src="images/green/information_white.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="2px" height="1px">  <strong style="margin-left: 10%"> Info </strong> </a>
+				<a href="mailto:webtime.info.pl@gmail.com" target="_top"><img src="images/green/message_white.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="2px" height="1px">  <strong style="margin-left: 10%"> Contact </strong> </a>
+			</div>
+        </div>
+        <span style="font-size:30px;cursor:pointer; margin-left:5%;" onclick="openNav()">&#9776;</span>
+	    <div class="content">
+
+		    <div id="idSystemDiv" style="text-align: left; margin-left: auto; margin-top: 60px; width:100%; margin-right: auto">
+		        <div id='idTabelaStatyczna'>
+			        <table> 
+				        <tr>
+					        <td>
+						        <input type='text' placeholder="Enter value" id='idFirst' onchange="doCalculate()"/> 
+					        </td>
+					        <td>
+						        <input type='text' placeholder="Result value" id='idSecond' onchange="doCalculate()"/>
+					        </td>
+				        </tr>
+				        <tr>
+					        <th>From system</th>			
+					        <th>To system </th>			
+				        </tr>
+				        <tr>
+					        <td>
+						        <label class="container">Binary 
+						          <input type="radio" checked="checked" name="radioFirst" onchange="doCalculateFirst(2)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">Binary
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(2)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr> 
+				        <tr>
+					        <td>
+						        <label class="container">Ternary
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(3)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">Ternary
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(3)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr> 
+
+				        <tr> 
+					        <td>
+						        <label class="container">	Quaternary
+						          <input type="radio"  name="radioFirst" onchange="doCalculateFirst(4)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">	Quaternary
+						          <input type="radio"  name="radioSecond" onchange="doCalculateSecond(4)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+						
+				        </tr> 
+				        <tr> 
+					        <td>
+						        <label class="container">	Quinary
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(5)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">	Quinary
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(5)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">	Senary
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(6)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">	Senary
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(6)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">	Septenary
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(7)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">	Septenary
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(7)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">Octal 
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(8)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">Octal
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(8)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">Nonary
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(9)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">Nonary
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(9)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">Decimal
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(10)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">Decimal
+						          <input type="radio" checked="checked" name="radioSecond" onchange="doCalculateSecond(10)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">	Undecimal
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(11)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">	Undecimal
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(11)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">Duodecimal
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(12)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">Duodecimal
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(12)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">	Tridecimal
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(13)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">	Tridecimal
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(13)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">Tetradecimal
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(14)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">Tetradecimal
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(14)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">	Pentadecimal
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(15)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">	Pentadecimal
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(15)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr> 
+					        <td>
+						        <label class="container">Hex
+						          <input type="radio" name="radioFirst" onchange="doCalculateFirst(16)">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">Hex
+						          <input type="radio" name="radioSecond" onchange="doCalculateSecond(16)">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+			        </table> 
+		        </div>
+		    </div>
+	
+	    </div>
+
+    </body>
+
+</html>

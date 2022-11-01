@@ -1,0 +1,152 @@
+﻿<html>
+    <head>
+	    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <script src="scripts/script_base.js"></script>
+	    <script src="scripts/script_dlugosci.js"></script>
+	
+	
+    </head>
+    <body style="font-family: 'Lato', sans-serif;">
+        <div id="myNav" class="overlay style="margin-top: 10%">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html"> <img src="images/green/home_white.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="3px" height="1px">  <strong style="margin-left: 10%"> Home </strong> </a>
+				<a href="kalkulator.html"> <img src="images/green/calculator_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"> <strong> Calculator </strong> </a>
+				<a href="systemy.html"> <img src="images/green/hashtag_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"> <strong>Numeral systems</strong></a>
+				<a href="waluty_lista.html"> <img src="images/green/money_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Currencies </strong></a>
+				<a href="przeliczanie_dlugosci.html" style="color: #4CAF50"> <img src="images/green/ruler_green.png" width="19px" style="margin-left: 5%"> <img src="images/odstep.png" width="22px" height="1px"><strong>Length </strong></a>
+				<a href="powierzchnia.html"> <img src="images/green/area_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Area</strong></a>
+				<a href="objetosc.html"> <img src="images/green/volume_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Volume</strong></a>
+				<a href="przeliczanie_wagii.html"> <img src="images/green/weight_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Weight</strong></a>
+				<a href="temperatura.html"> <img src="images/green/thermometer_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="20px" height="1px"> <strong>Temperature</strong></a>
+				<hr> </hr>
+				<a href="info.html"> <img src="images/green/information_white.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="2px" height="1px">  <strong style="margin-left: 10%"> Info </strong> </a>
+				<a href="mailto:webtime.info.pl@gmail.com" target="_top"><img src="images/green/message_white.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="2px" height="1px">  <strong style="margin-left: 10%"> Contact </strong> </a>
+			</div>
+        </div>
+        <span style="font-size:30px;cursor:pointer; margin-left:5%;" onclick="openNav()">&#9776;</span>
+	    <div class="content">
+
+		    <div id="idDlugoscDiv" style="text-align: left; margin-left: auto; margin-top: 60px; width:100%; margin-right: auto">
+		        <div id='idTabelaStatyczna'>
+			        <table> 
+				        <tr>
+					        <td>
+						        <input type='text' placeholder="Enter Value" id='idFirst' value = '1' onchange="przeliczJednostekDlugosci()"/> <!--- input, ktory wczytuje wartosc jaka chcemy przeliczyc na inna wartosc --->
+					        </td>
+					        <td>
+						        <input type='text' placeholder="Result"id='idSecond' value = '1' onchange="przeliczJednostekDlugosci()"/> <!--- ten input tylko wypisuje, dlatego to nie musi byc input, ale musi byc taka ramka jak w pierwszym inpucie--->
+					        </td>
+				        </tr>
+				        <tr>
+					        <th>From Unit</th>			
+					        <th>To Unit</th>			
+				        </tr>
+				        <tr>
+					        <td>
+						        <label class="container">Microns
+						          <input type="radio" name="radioFirst" onchange="FirstMikrony()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">Microns
+						          <input type="radio" name="radioSecond" onchange="SecondMikrony()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				        <tr>
+					        <td>
+						        <label class="container">Milimeters
+						          <input type="radio" name="radioFirst" onchange="FirstMilimetry()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">Milimeters
+						          <input type="radio" name="radioSecond" onchange="SecondMilimetry()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr> 
+				        <tr>
+					        <td>
+						        <label class="container">Centymeters
+						          <input type="radio" name="radioFirst" onchange="FirstCentymetry()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">Centymeters
+						          <input type="radio" name="radioSecond" onchange="SecondCentymetry()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr> 
+				
+				        <tr> 
+					        <td>
+						        <label class="container">Cales
+						          <input type="radio" checked="checked" name="radioFirst" onchange="FirstCale()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">Cales
+						          <input type="radio" checked="checked" name="radioSecond" onchange="SecondCale()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+
+				        <tr> 
+					        <td>
+						        <label class="container">Meters
+						          <input type="radio" checked="checked" name="radioFirst" onchange="FirstMetry()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">Meters
+						          <input type="radio" checked="checked" name="radioSecond" onchange="SecondMetry()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+						
+				        </tr> 
+			
+				        <tr> 
+					        <td>
+						        <label class="container">Kilometers
+						          <input type="radio" name="radioFirst" onchange="FirstKilometry()">
+						          <span class="checkmark"></span>
+						        </label>					
+					        </td>
+					        <td>
+						        <label class="container">Kilometers
+						          <input type="radio" name="radioSecond" onchange="SecondKilometry()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+				        </tr>
+				
+				        <tr> 
+					        <td>
+						        <label class="container">Miles
+						          <input type="radio" name="radioFirst" onchange="FirstMile()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+					        <td>
+						        <label class="container">Miles
+						          <input type="radio"  name="radioSecond" onchange="SecondMile()">
+						          <span class="checkmark"></span>
+						        </label>
+					        </td>
+			        </table> 
+		        </div>
+		    </div>
+	    </div>	
+    </body>	
+</html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="scripts/script_base.js"></script>
+        <script src="scripts/script_systemy.js"></script>
+    </head>
+
+	<body style="font-family: 'Lato', sans-serif;">
+		<div class="btn-group" style="text-align: left; margin-left: 0%; margin-top: 1%">
+			<a href="kalkulator.html"> <button class="nawigacja_srodek"> <img src="images/calculator_icon.png" width="75" height="75" > <h3>Calculator </h3></button></a>
+			<a href="systemy.html"> <button class="nawigacja_srodek"> <img src="images/hash.png" width="75" height="75" > <h3> Numeral systems</h3> </button></a>
+			<a href="waluty_lista.html"> <button class="nawigacja_srodek"> <img src="images/currencies.png" width="75" height="75" > <h3> Currencies</h3> </button></a>
+			<a href="przeliczanie_dlugosci.html"> <button class="nawigacja_srodek"> <img src="images/ruler.png" width="75" height="75" > <h3> Length </h3> </button></a>
+		</div>
+
+		<div class="btn-group" style="text-align: left; margin-left: 0%">
+			<a href="powierzchnia.html "><button class="nawigacja_srodek"> <img src="images/area.png" width="75" height="75" > <h3> Area</h3> </button> </a>
+			<a href="objetosc.html"> <button class="nawigacja_srodek"> <img src="images/cube_ikona.png" width="75" height="75" > <h3>Volume</h3> </button></a>
+			<a href="przeliczanie_wagii.html"> <button class="nawigacja_srodek"> <img src="images/waga_iconBig.png" width="75" height="75" > <h3> Weight</h3> </button></a>
+			<a href="temperatura.html"> <button class="nawigacja_srodek"> <img src="images/termometr_iconBig.png" width="75" height="75" > <h3> Temperature </h3> </button></a>
+		</div>
+		<script>
+			var modal = document.getElementById('id01');
+			window.onclick = function (event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+	</body>
+</html>
+

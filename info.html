@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/script_base.js"></script>
+    
+    <script src="scripts/script_kalkulator.js"></script>
+</head>
+
+    
+    <body>
+        <div id="myNav" class="overlay style="margin-top: 10%">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html"> <img src="images/green/home_white.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="3px" height="1px">  <strong style="margin-left: 10%"> Home </strong> </a>
+                <a href="kalkulator.html"> <img src="images/green/calculator_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"> <strong> Calculator </strong> </a>
+                <a href="systemy.html"> <img src="images/green/hashtag_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"> <strong>Numeral systems</strong></a>
+                <a href="waluty_lista.html"> <img src="images/green/money_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Currencies </strong></a>
+                <a href="przeliczanie_dlugosci.html"> <img src="images/green/ruler_white.png" width="19px" style="margin-left: 5%"> <img src="images/odstep.png" width="22px" height="1px"><strong>Length </strong></a>
+                <a href="powierzchnia.html"> <img src="images/green/area_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Area</strong></a>
+                <a href="objetosc.html"> <img src="images/green/volume_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Volume</strong></a>
+                <a href="przeliczanie_wagii.html"> <img src="images/green/weight_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="25px" height="1px"><strong>Weight</strong></a>
+                <a href="temperatura.html"> <img src="images/green/thermometer_white.png" width="19px" style="margin-left: 5%"><img src="images/odstep.png" width="20px" height="1px"> <strong>Temperature</strong></a>
+                <hr> </hr>
+                <a href="info.html" style="color: #4CAF50"> <img src="images/green/information_green.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="2px" height="1px">  <strong style="margin-left: 10%"> Info </strong> </a>
+                <a href="mailto:webtime.info.pl@gmail.com" target="_top"><img src="images/green/message_white.png" width="21px" style="margin-left: 5%"><img src="images/odstep.png" width="2px" height="1px">  <strong style="margin-left: 10%"> Contact </strong> </a>
+            </div>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+        <font face="verdana">
+            <h1 style="text-align:center"> <stong> INFORMATION: </stong> </h1>
+            <hr> </hr>
+
+
+
+            <h3 style="margin-left: 15%">
+                Characters in calc:
+                <div style="margin-top:-8%; margin-left: -15%" id="sh"> + </div>
+            </h3>
+            <div id="ukryty_tekst">
+                <ol>
+                    <table border="0px" style="text-align: center; margin-left: 3%">
+                        <tr>
+                            <th> Explanation </th>
+                            <th> Character </th>
+                        </tr>
+
+                        <tr>
+                            <td> Power </td>
+                            <td> ^ </td>
+                        </tr>
+
+                        <tr>
+                            <td> Addiction </td>
+                            <td> + </td>
+                        </tr>
+
+                        <tr>
+                            <td> Substraction </td>
+                            <td> - </td>
+                        </tr>
+
+                        <tr>
+                            <td> Division </td>
+                            <td> / </td>
+                        </tr>
+
+                        <tr>
+                            <td> Multiplication</td>
+                            <td> *</td>
+                        </tr>
+
+                    </table>
+                    <hr> </hr>
+                    
+                </ol>
+            </div>
+            
+
+
+            <h3 style="margin-left: 15%">
+                How to use calculator:
+                <div id="sh2" style="margin-top: -8%; margin-left: -15% "> + </div>
+            </h3>
+            <div id="ukryty_tekst2">
+                <ol>
+                    Write your operation in empty field in the middle of the screen.
+                    <br>
+                    Operation is splitted to a couple of moves, if it is more complicated, calculator will do more moves.
+                    <br>
+                    You will see three columns of fields:
+                    <br>
+                    <li style="margin-left:2.5%"> Lp shows you numer of current move</li>
+                    <li style="margin-left:2.5%"> Result is showing you what is the reult of operation from “operation” field.</li>
+                    <li style="margin-left:2.5%"> Operation is projecting what operation it is doing in this move</li>
+                    <hr> </hr>
+                </ol>
+            </div>
+            
+
+
+            <h3 style="margin-left: 15%">
+                How to use other functions:
+                <div id="sh3" style="margin-top: -8%; margin-left: -15% "> + </div>
+            </h3>
+            <div id="ukryty_tekst3">
+                <ol>
+                    <li style="margin-left:2%"> You have to fill an empty field on the left. </li>
+                    <li style="margin-left:2%">Then score original and the final units. </li>
+                    <li style="margin-left:2%"> Results will be in the right field. Maximal numer of characters is 300. </li>
+                    <hr> </hr>
+                </ol>
+            </div>
+
+            <h3 style="margin-left: 15%">
+                Credits:
+                <div id="sh4" style="margin-top: -8%; margin-left: -15% "> + </div>
+            </h3>
+            <div id="ukryty_tekst4">
+                <ol>
+                    <li style="margin-left:2%"> COŒ </li>
+                    <hr> </hr>
+                </ol>
+            </div>
+     
+        </font>
+
+    </body>
+    
+</html>
+
+<script src="scripts/info.js"></script>
